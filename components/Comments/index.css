@@ -1,0 +1,109 @@
+/* Write your CSS here */
+* {
+  font-family: 'Roboto';
+}
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  order: 0;
+}
+.comment-image {
+  margin-left: 100px;
+  order: 1;
+}
+.heading {
+  color: #1e293b;
+  font-size: 40px;
+}
+.para {
+  color: #475569;
+}
+.input-text {
+  border: 1px solid #cbd2d9;
+  height: 40px;
+  width: 350px;
+  font-size: 15px;
+  padding: 10px;
+  margin: 5px;
+  outline: none;
+}
+.input-comment {
+  border: 1px solid #cbd2d9;
+  font-size: 15px;
+  padding: 10px;
+  margin: 5px;
+  outline: none;
+}
+.add-btn {
+  background-color: #0284c7;
+  margin: 5px;
+  border-width: 0px;
+  height: 30px;
+  color: #cbd2d9;
+  border-radius: 5px;
+  align-self: flex-start;
+  padding: 5px;
+  cursor: pointer;
+}
+hr {
+  border-top: 1px solid #dee0e3;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  width: 100%;
+  height: 4px;
+  margin-right: auto;
+}
+.count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.comment-count {
+  background-color: #0284c7;
+  color: #ffffff;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  padding: 1px;
+  text-align: center;
+  margin: 10px;
+}
+.comments-para {
+  margin-top: 10px;
+}
+.comments-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  .comment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .comment-image {
+    height: 250px;
+    width: 350px;
+    align-self: center;
+  }
+}
