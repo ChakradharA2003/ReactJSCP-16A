@@ -18,17 +18,13 @@ const CommentItem = props => {
   const onClickedDeleteImage = () => {
     onDeleteComment(id)
   }
-  let countOfIndex = -1
-  const colors = () => {
-    const color = backgroundColors
-    if (countOfIndex > 7) {
-      countOfIndex = 0
-    } else {
-      countOfIndex += 1
-    }
-    return color[countOfIndex]
+ const getRandomColor = () => {
+    const index =
+      Math.floor(Math.random() * (backgroundColors.length - 0 + 1)) + 0
+    const color = backgroundColors[index]
+    return color
   }
-  const color = colors()
+  const color = getRandomColor()
   const letter = name.slice(0, 1)
   const time = formatDistanceToNow(new Date())
   const likePara = isLiked ? 'like-para' : 'not-liked-para'
