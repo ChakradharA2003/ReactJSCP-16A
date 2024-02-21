@@ -22,6 +22,17 @@ class Comments extends Component {
     commentsArray: [],
   }
 
+   onChangeLikeImage = id => {
+    this.setState(prevState => ({
+      commentsArray: prevState.commentsArray.map(each => {
+        if (each.id === id) {
+          return {...each, isLiked: !each.isLiked}
+        }
+        return each
+      }),
+    }))
+  }
+
   onDeleteComment = id => {
     const {commentsArray} = this.state
     const filteredComments = commentsArray.filter(each => each.id !== id)
